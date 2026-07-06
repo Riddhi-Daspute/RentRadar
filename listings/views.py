@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -22,4 +23,6 @@ def home(request):
         print("Rent :", rent)
         print("Amenities :", amenities)
 
+        messages.success(request, "Property details received successfully!")
+        
     return render(request, 'home.html')

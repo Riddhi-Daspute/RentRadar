@@ -10,6 +10,14 @@
 
 <h2>Add Rental Property</h2>
 
+{% if messages %}
+    {% for message in messages %}
+        <p style="color:green;">
+            {{ message }}
+        </p>
+    {% endfor %}
+{% endif %}
+
 <form method="POST">
 
     {% csrf_token %}
