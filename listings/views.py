@@ -4,6 +4,22 @@ from django.shortcuts import render
 def home(request):
 
     if request.method == "POST":
-        print("Form Submitted!")
-        
+        title = request.POST.get("title")
+        owner = request.POST.get("owner")
+        phone = request.POST.get("phone")
+        area = request.POST.get("area")
+        city = request.POST.get("city")
+        pincode = request.POST.get("pincode")
+        rent = request.POST.get("rent")
+        amenities = request.POST.get("amenities")
+
+        print("Property Title :", title)
+        print("Owner :", owner)
+        print("Phone :", phone)
+        print("Area :", area)
+        print("City :", city)
+        print("Pincode :", pincode)
+        print("Rent :", rent)
+        print("Amenities :", amenities)
+
     return render(request, 'home.html')
