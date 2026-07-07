@@ -12,9 +12,19 @@
 
 {% if messages %}
     {% for message in messages %}
-        <p style="color:green;">
-            {{ message }}
-        </p>
+
+        {% if message.tags == 'success' %}
+            <p style="color:green;">
+                {{ message }}
+            </p>
+        {% endif %}
+
+        {% if message.tags == 'error' %}
+            <p style="color:red;">
+                {{ message }}
+            </p>
+        {% endif %}
+
     {% endfor %}
 {% endif %}
 

@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.contrib import messages
 
+from .validators import (
+    validate_phone,
+    validate_pincode,
+    validate_rent
+)
+
 # Create your views here.
 def home(request):
 
@@ -13,6 +19,22 @@ def home(request):
         pincode = request.POST.get("pincode")
         rent = request.POST.get("rent")
         amenities = request.POST.get("amenities")
+
+        # Phone Validation
+        if not validate_phone(phone):
+            messages.error(request, "Invalid phone number! Phone number must contain exactly 10 digits.")
+            return render(request, "home.html")
+
+        # Pincode Validation
+        if not validate_pincode(pincode):
+            messages.error(request, "Invalid pincode! Pincode must contain exactly 6 digits.")
+            return render(request, "home.html")
+
+        # Rent Validation
+        if not validate_rent(rent):
+            messages.error(request, "Invalid rent! Rent must be a positive number.")
+            return render(request, "home.html")
+
 
         print("Property Title :", title)
         print("Owner :", owner)
