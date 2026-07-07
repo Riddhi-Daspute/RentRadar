@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Property</title>
+</head>
+<body>
+
+<h2>Edit Property</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Title</label><br>
+    <input type="text" name="title" value="{{ property.title }}"><br><br>
+
+    <label>Owner</label><br>
+    <input type="text" name="owner" value="{{ property.owner }}"><br><br>
+
+    <label>Phone</label><br>
+    <input type="text" name="phone" value="{{ property.phone }}"><br><br>
+
+    <label>Area</label><br>
+    <input type="text" name="area" value="{{ property.area }}"><br><br>
+
+    <label>City</label><br>
+    <input type="text" name="city" value="{{ property.city }}"><br><br>
+
+    <label>Pincode</label><br>
+    <input type="text" name="pincode" value="{{ property.pincode }}"><br><br>
+
+    <label>Rent</label><br>
+    <input type="number" name="rent" value="{{ property.rent }}"><br><br>
+
+    <label>Amenities</label><br>
+    <input type="text" name="amenities"
+           value="{{ property.amenities }}"><br><br>
+
+    <button type="submit">Update Property</button>
+
+</form>
+
+</body>
+</html>

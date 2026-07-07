@@ -84,7 +84,9 @@
     <p><strong>Rent:</strong> ₹{{ property.rent }}</p>
 
     <p><strong>Amenities:</strong> {{ property.amenities }}</p>
-
+    <a href="{% url 'edit_property' property.id %}">
+        Edit
+    </a>
 </div>
 
 {% empty %}

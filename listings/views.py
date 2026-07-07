@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from bson import ObjectId
+from django.shortcuts import render,redirect
 from django.contrib import messages
 
 from .validators import (
@@ -9,6 +10,49 @@ from .validators import (
 
 from .db import properties_collection
 
+def edit_property(request, property_id):
+
+    if request.method == "POST":
+
+        title = request.POST.get("title")
+        owner = request.POST.get("owner")
+        phone = request.POST.get("phone")
+        area = request.POST.get("area")
+        city = request.POST.get("city")
+        pincode = request.POST.get("pincode")
+        rent = request.POST.get("rent")
+        amenities = request.POST.get("amenities")
+
+        properties_collection.update_one(
+            {"_id": ObjectId(property_id)},
+            {
+                "$set": {
+                    "title": title,
+                    "owner": owner,
+                    "phone": phone,
+                    "area": area,
+                    "city": city,
+                    "pincode": pincode,
+                    "rent": int(rent),
+                    "amenities": amenities
+                }
+            }
+            )
+
+        return redirect("home")
+
+    property = properties_collection.find_one(
+        {
+            "_id": ObjectId(property_id)
+        }
+    )
+
+    return render(
+    request, "edit_property.html",
+    {
+        "property": property
+    }
+    )
 # Create your views here.
 def home(request):
 
@@ -60,8 +104,12 @@ def home(request):
         print("Amenities :", amenities)
 
         messages.success(request, "Property details received successfully!")
-        
-    properties = list(properties_collection.find())    
+
+    properties = list(properties_collection.find())
+
+    for property in properties:
+        property["id"] = str(property["_id"])  
+
     return render(request, 'home.html',
     {
         "properties": properties
