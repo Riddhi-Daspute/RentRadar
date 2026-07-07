@@ -7,6 +7,8 @@ from .validators import (
     validate_rent
 )
 
+from .db import properties_collection
+
 # Create your views here.
 def home(request):
 
@@ -34,7 +36,19 @@ def home(request):
         if not validate_rent(rent):
             messages.error(request, "Invalid rent! Rent must be a positive number.")
             return render(request, "home.html")
+        
+        property_data = {
+            "title": title,
+            "owner": owner,
+            "phone": phone,
+            "area": area,
+            "city": city,
+            "pincode": pincode,
+            "rent": int(rent),
+            "amenities": amenities
+        }
 
+        properties_collection.insert_one(property_data)
 
         print("Property Title :", title)
         print("Owner :", owner)
