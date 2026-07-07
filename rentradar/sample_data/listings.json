@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Green Residency",
+    "owner": "Rahul Sharma",
+    "phone": "9876543210",
+    "area": "College Road",
+    "city": "Nashik",
+    "pincode": "422005",
+    "rent": 18000,
+    "amenities": ["Parking", "WiFi", "Security"]
+  },
+  {
+    "title": "Sunshine Apartment",
+    "owner": "Priya Patil",
+    "phone": "9123456780",
+    "area": "Gangapur Road",
+    "city": "Nashik",
+    "pincode": "422013",
+    "rent": 22000,
+    "amenities": ["Lift", "Gym", "Parking"]
+  },
+  {
+    "title": "Royal Heights",
+    "owner": "Amit Verma",
+    "phone": "9988776655",
+    "area": "Kothrud",
+    "city": "Pune",
+    "pincode": "411038",
+    "rent": 25000,
+    "amenities": ["WiFi", "Security", "Garden"]
+  },
+  {
+    "title": "Skyline Towers",
+    "owner": "Neha Joshi",
+    "phone": "9876501234",
+    "area": "Hinjewadi",
+    "city": "Pune",
+    "pincode": "411057",
+    "rent": 28000,
+    "amenities": ["Swimming Pool", "Gym", "Parking"]
+  },
+  {
+    "title": "Ocean View",
+    "owner": "Vikram Singh",
+    "phone": "9090909090",
+    "area": "Andheri",
+    "city": "Mumbai",
+    "pincode": "400053",
+    "rent": 45000,
+    "amenities": ["Lift", "Security", "Power Backup"]
+  },
+  {
+    "title": "Palm Residency",
+    "owner": "Sneha Kulkarni",
+    "phone": "9012345678",
+    "area": "Powai",
+    "city": "Mumbai",
+    "pincode": "400076",
+    "rent": 50000,
+    "amenities": ["Gym", "Club House", "Parking"]
+  },
+  {
+    "title": "Lake View Homes",
+    "owner": "Rohan Deshmukh",
+    "phone": "8899776655",
+    "area": "Satpur",
+    "city": "Nashik",
+    "pincode": "422007",
+    "rent": 16000,
+    "amenities": ["Parking", "Garden"]
+  },
+  {
+    "title": "Elite Residency",
+    "owner": "Kiran Mehta",
+    "phone": "9988112233",
+    "area": "Baner",
+    "city": "Pune",
+    "pincode": "411045",
+    "rent": 30000,
+    "amenities": ["Swimming Pool", "Security", "Gym"]
+  },
+  {
+    "title": "City Pride",
+    "owner": "Anjali Shah",
+    "phone": "9876123456",
+    "area": "Dadar",
+    "city": "Mumbai",
+    "pincode": "400014",
+    "rent": 42000,
+    "amenities": ["Parking", "Lift", "WiFi"]
+  },
+  {
+    "title": "Comfort Living",
+    "owner": "Suresh Patil",
+    "phone": "9765432109",
+    "area": "Cidco",
+    "city": "Nashik",
+    "pincode": "422009",
+    "rent": 17000,
+    "amenities": ["Parking", "Power Backup", "Security"]
+  }
+]
