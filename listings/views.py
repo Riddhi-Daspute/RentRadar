@@ -61,4 +61,8 @@ def home(request):
 
         messages.success(request, "Property details received successfully!")
         
-    return render(request, 'home.html')
+    properties = list(properties_collection.find())    
+    return render(request, 'home.html',
+    {
+        "properties": properties
+    })

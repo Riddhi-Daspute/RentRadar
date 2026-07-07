@@ -61,6 +61,36 @@
     </button>
 
 </form>
+<hr>
 
+<h2>Available Properties</h2>
+
+{% for property in properties %}
+
+<div style="border:1px solid gray; padding:10px; margin:10px;">
+
+    <h3>{{ property.title }}</h3>
+
+    <p><strong>Owner:</strong> {{ property.owner }}</p>
+
+    <p><strong>Phone:</strong> {{ property.phone }}</p>
+
+    <p><strong>Area:</strong> {{ property.area }}</p>
+
+    <p><strong>City:</strong> {{ property.city }}</p>
+
+    <p><strong>Pincode:</strong> {{ property.pincode }}</p>
+
+    <p><strong>Rent:</strong> ₹{{ property.rent }}</p>
+
+    <p><strong>Amenities:</strong> {{ property.amenities }}</p>
+
+</div>
+
+{% empty %}
+
+<p>No properties available.</p>
+
+{% endfor %}
 </body>
 </html>
