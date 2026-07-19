@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Average Rent Report</title>
+</head>
+<body>
+
+<h1>Area-wise Average Rent Report</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Area</th>
+    <th>Average Rent</th>
+</tr>
+
+{% for item in report %}
+
+<tr>
+    <td>{{ item.area }}</td>
+    <td>₹{{ item.average_rent|floatformat:2 }}</td>
+</tr>
+
+{% empty %}
+
+<tr>
+    <td colspan="2">No Data Available</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "6a5c3f3cf1756a2720e897be"
+  },
+  "title": "Green Residency",
+  "owner": "Rahul Sharma",
+  "phone": "9824673213",
+  "area": "College Road",
+  "city": "Nashik",
+  "pincode": "422101",
+  "rent": 18000,
+  "amenities": "Parling, Wifi"
+},
+{
+  "_id": {
+    "$oid": "6a5c4184eaadbfcf8865643b"
+  },
+  "title": "Hieghts",
+  "owner": "Deep Singh",
+  "phone": "9386802874",
+  "area": "Ashoka Marg",
+  "city": "Nashik",
+  "pincode": "422101",
+  "rent": 30000,
+  "amenities": "Parling, Wifi"
+},
+{
+  "_id": {
+    "$oid": "6a5c6374e7dddd877b016e96"
+  },
+  "title": "Insights",
+  "owner": "Shweta Mahir",
+  "phone": "8763748432",
+  "area": "College Road",
+  "city": "Nashik",
+  "pincode": "422005",
+  "rent": 20000,
+  "amenities": "Garden"
+},
+{
+  "_id": {
+    "$oid": "6a5ccccc440c975ff79469d0"
+  },
+  "title": "Lake View Residency",
+  "owner": "Sneha Joshi",
+  "phone": "9090909091",
+  "area": "Kothrud",
+  "city": "Pune",
+  "pincode": "411038",
+  "rent": 26000,
+  "amenities": "WiFi, Lift, Security",
+  "price_history": [
+    {
+      "date": "2026-07-19",
+      "rent": 26000
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a5ce1597f16f31ab81526af"
+  },
+  "title": "Sunshine Apartments",
+  "owner": "Priya Patil",
+  "phone": "7579343754",
+  "area": "Gangapur Road",
+  "city": "Nashik",
+  "pincode": "422103",
+  "rent": 23000,
+  "amenities": "Gym, Wifi, Power Backup",
+  "price_history": [
+    {
+      "date": "2026-07-19",
+      "rent": 22000
+    },
+    {
+      "date": "2026-07-19",
+      "rent": 23000
+    }
+  ]
+}]

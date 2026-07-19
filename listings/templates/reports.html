@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>RentRadar Reports</h1>
+
+<hr>
+
+<h2>Average Rent by Area</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Area</th>
+    <th>Average Rent</th>
+</tr>
+
+{% for item in report %}
+
+<tr>
+    <td>{{ item.area }}</td>
+    <td>₹{{ item.average_rent|floatformat:2 }}</td>
+</tr>
+
+{% empty %}
+
+<tr>
+    <td colspan="2">No data available</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<hr>
+
+<h2>Area-wise Price Trend Chart</h2>
+
+<canvas id="priceChart"></canvas>
+
+<script>
+
+const labels = [
+    {% for label in chart_labels %}
+        "{{ label }}",
+    {% endfor %}
+];
+
+const values = [
+    {% for value in chart_values %}
+        {{ value }},
+    {% endfor %}
+];
+
+const ctx = document.getElementById('priceChart');
+
+new Chart(ctx, {
+
+    type: 'line',
+
+    data: {
+
+        labels: labels,
+
+        datasets: [{
+
+            label: 'Average Rent by Area',
+
+            data: values,
+
+            borderWidth: 3,
+            fill: false
+
+        }]
+    },
+
+    options: {
+
+        responsive: true,
+
+        scales: {
+
+            y: {
+
+                beginAtZero: false
+
+            }
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
