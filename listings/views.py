@@ -53,6 +53,20 @@ def edit_property(request, property_id):
         "property": property
     }
     )
+
+def delete_property(request, property_id):
+
+    properties_collection.delete_one(
+        {
+            "_id": ObjectId(property_id)
+        }
+    )
+
+    messages.success(request, "Property deleted successfully!")
+
+    return redirect("home")
+
+
 # Create your views here.
 def home(request):
 

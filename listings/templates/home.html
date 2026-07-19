@@ -87,6 +87,10 @@
     <a href="{% url 'edit_property' property.id %}">
         Edit
     </a>
+    <a href="{% url 'delete_property' property.id %}"
+        onclick="return confirm('Are you sure you want to delete this property?')">
+        Delete
+    </a>
 </div>
 
 {% empty %}
