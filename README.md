@@ -93,15 +93,15 @@ http://127.0.0.1:8000/
 
 ### Home Page
 
-Home.jpeg
+![Home Page](screenshots/Home.jpeg)
 
 ### Owner Dashboard
 
-Owner.jpeg
+![Owner Dashboard](screenshots/Owner.jpeg)
 
 ### Reports Page
 
-Report.jpeg
+![Reports Page](screenshots/Report.jpeg)
 
 ---
 
