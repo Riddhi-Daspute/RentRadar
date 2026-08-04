@@ -101,7 +101,7 @@ http://127.0.0.1:8000/
 
 ### Reports Page
 
-![Reports Page](screenshots/Report.jpeg)
+![Reports Page](screenshots/Reports.jpeg)
 
 ---
 
