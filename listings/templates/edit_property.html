@@ -2,42 +2,65 @@
 <html>
 <head>
     <title>Edit Property</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
+<div class="container">
+
 <h2>Edit Property</h2>
+
+<p class="subtitle">
+Update the property information and save your changes.
+</p>
+
+<div class="form-container">
+
+<h2>Update Rental Property</h2>
 
 <form method="POST">
     {% csrf_token %}
 
+    <div class="form-group">
     <label>Title</label><br>
-    <input type="text" name="title" value="{{ property.title }}"><br><br>
+    <input type="text" name="title" value="{{ property.title }}"><br><br></div>
 
+    <div class="form-group">
     <label>Owner</label><br>
-    <input type="text" name="owner" value="{{ property.owner }}"><br><br>
+    <input type="text" name="owner" value="{{ property.owner }}"><br><br></div>
 
+    <div class="form-group">
     <label>Phone</label><br>
-    <input type="text" name="phone" value="{{ property.phone }}"><br><br>
+    <input type="text" name="phone" value="{{ property.phone }}"><br><br></div>
 
+    <div class="form-group">
     <label>Area</label><br>
-    <input type="text" name="area" value="{{ property.area }}"><br><br>
+    <input type="text" name="area" value="{{ property.area }}"><br><br></div>
 
+    <div class="form-group">
     <label>City</label><br>
-    <input type="text" name="city" value="{{ property.city }}"><br><br>
+    <input type="text" name="city" value="{{ property.city }}"><br><br></div>
 
+    <div class="form-group">
     <label>Pincode</label><br>
-    <input type="text" name="pincode" value="{{ property.pincode }}"><br><br>
+    <input type="text" name="pincode" value="{{ property.pincode }}"><br><br></div>
 
+    <div class="form-group">
     <label>Rent</label><br>
-    <input type="number" name="rent" value="{{ property.rent }}"><br><br>
+    <input type="number" name="rent" value="{{ property.rent }}"><br><br></div>
 
+    <div class="form-group">
     <label>Amenities</label><br>
     <input type="text" name="amenities"
-           value="{{ property.amenities }}"><br><br>
+           value="{{ property.amenities }}"><br><br></div>
 
     <button type="submit">Update Property</button>
 
 </form>
-
+</div>
+</div>
 </body>
 </html>

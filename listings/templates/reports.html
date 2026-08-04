@@ -1,19 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Reports</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
 
+<nav class="navbar">
+
+    <div class="logo">
+        RentRadar
+    </div>
+
+    <div class="nav-links">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'owner_dashboard' %}">Owner Dashboard</a>
+        <a href="{% url 'reports' %}">Reports</a>
+    </div>
+
+</nav>
+
+<div class="container">
+
 <h1>RentRadar Reports</h1>
+
+<p class="subtitle"> Rental Price Analysis Dashboard </p>
 
 <hr>
 
+<div class="table-card">
+
 <h2>Average Rent by Area</h2>
 
-<table border="1" cellpadding="10">
+<table class="report-table">
 
 <tr>
     <th>Area</th>
@@ -36,12 +62,17 @@
 {% endfor %}
 
 </table>
+</div>
 
 <hr>
+
+<div class="chart-card">
 
 <h2>Area-wise Price Trend Chart</h2>
 
 <canvas id="priceChart"></canvas>
+
+</div>
 
 <script>
 
@@ -99,5 +130,6 @@ new Chart(ctx, {
 
 </script>
 
+</div>
 </body>
 </html>

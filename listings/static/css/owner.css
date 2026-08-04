@@ -1,0 +1,185 @@
+/* General */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 60px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:35px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    opacity:.8;
+}
+
+/* Main Container */
+
+.container{
+    width:90%;
+    margin:40px auto;
+}
+
+.container h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+/* Form Card */
+
+.form-card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    padding:35px;
+    margin-bottom:50px;
+}
+
+.form-card h2{
+    margin-bottom:25px;
+}
+
+/* Form Layout */
+
+form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px 30px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:14px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    grid-column:1 / -1;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* Submit Button */
+
+form button{
+    grid-column:span 2;
+}
+
+/* Messages */
+
+p[style*="green"]{
+    color:green !important;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+p[style*="red"]{
+    color:red !important;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+/* Property Cards */
+
+.property-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:25px;
+    margin-top:25px;
+}
+
+.property-card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    padding:25px;
+    transition:.3s;
+}
+
+.property-card:hover{
+    transform:translateY(-6px);
+}
+
+.property-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.property-card p{
+    margin:8px 0;
+}
+
+/* Action Buttons */
+
+.actions{
+    margin-top:20px;
+}
+
+.edit-btn,
+.delete-btn{
+    text-decoration:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    margin-right:10px;
+    font-weight:bold;
+}
+
+.edit-btn{
+    background:#16a34a;
+}
+
+.delete-btn{
+    background:#dc2626;
+}
